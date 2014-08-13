@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="WX PR" id="a12af4e8-be7b-4cda-a6b6-534f97253000" 
+     gameId="a12af4e8-be5b-4cda-a6b6-534f9717391f" gameVersion="1.0.0.0" version="1.0.0.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CardSet.xsd">
+  <cards>
+<card id="a12af4e8-be4b-4cda-a6b6-534f97253001" name="中枪 古罗马长矛">
+	<property name="编号" value="PR_017"/>
+	<property name="稀有度" value="PR"/>
+	<property name="颜色" value="白"/>
+	<property name="类型" value="SIGNI"/>
+	<property name="等级" value="2"/>
+	<property name="力量" value="5000"/>
+	<property name="界限" value=""/>
+	<property name="费用" value=""/>
+	<property name="成长费用" value=""/>
+	<property name="技能" value="【常】：只要你的场上有等级4的《小玉》 ，这只SIGNI的力量变为10000。"/>
+	<property name="生命迸发能力" value=""/>
+	<property name="生命迸发标记" value=""/>
+	<property name="防御标记" value=""/>
+	<property name="角色" value=""/>
+	<property name="限定条件" value="小玉限定"/>
+	<property name="类别" value="精武：武装"/>
+	<property name="限制卡" value=""/>
+	<property name="暂缺" value=""/>
+</card>
+<card id="a12af4e8-be4b-4cda-a6b6-534f97253002" name="罗石 秘银">
+	<property name="编号" value="PR_018"/>
+	<property name="稀有度" value="PR"/>
+	<property name="颜色" value="红"/>
+	<property name="类型" value="SIGNI"/>
+	<property name="等级" value="3"/>
+	<property name="力量" value="15000"/>
+	<property name="界限" value=""/>
+	<property name="费用" value=""/>
+	<property name="成长费用" value=""/>
+	<property name="技能" value="【出】：舍弃1张手牌。  【常】：你的回合期间，这只SIGNI的力量变为18000。"/>
+	<property name="生命迸发能力" value="抽1张卡。"/>
+	<property name="生命迸发标记" value="1"/>
+	<property name="防御标记" value=""/>
+	<property name="角色" value=""/>
+	<property name="限定条件" value="花代限定"/>
+	<property name="类别" value="精罗：宝石"/>
+	<property name="限制卡" value=""/>
+	<property name="暂缺" value=""/>
+</card>
+<card id="a12af4e8-be4b-4cda-a6b6-534f97253003" name="珍宝">
+	<property name="编号" value="PR_019"/>
+	<property name="稀有度" value="PR"/>
+	<property name="颜色" value="蓝"/>
+	<property name="类型" value="魔法"/>
+	<property name="等级" value=""/>
+	<property name="力量" value=""/>
+	<property name="界限" value=""/>
+	<property name="费用" value="蓝1"/>
+	<property name="成长费用" value=""/>
+	<property name="技能" value="舍弃你喜欢的张数的手牌。之后，抽卡，抽卡数量为舍弃张数+1。"/>
+	<property name="生命迸发能力" value="舍弃2张卡。之后，抽3张卡。"/>
+	<property name="生命迸发标记" value="1"/>
+	<property name="防御标记" value=""/>
+	<property name="角色" value=""/>
+	<property name="限定条件" value="皮璐璐可限定"/>
+	<property name="类别" value=""/>
+	<property name="限制卡" value=""/>
+	<property name="暂缺" value=""/>
+</card>
+<card id="a12af4e8-be4b-4cda-a6b6-534f97253004" name="增援">
+	<property name="编号" value="PR_020"/>
+	<property name="稀有度" value="PR"/>
+	<property name="颜色" value="绿"/>
+	<property name="类型" value="魔法"/>
+	<property name="等级" value=""/>
+	<property name="力量" value=""/>
+	<property name="界限" value=""/>
+	<property name="费用" value="绿1"/>
+	<property name="成长费用" value=""/>
+	<property name="技能" value="从以下2种选择1种: 「从你的卡组里探寻1张力量10000以上的SIGNI卡，将其公开并加入加入手牌。之后将卡组洗切。」  「从你的卡组顶将2张卡放置到能量区」"/>
+	<property name="生命迸发能力" value=""/>
+	<property name="生命迸发标记" value=""/>
+	<property name="防御标记" value=""/>
+	<property name="角色" value=""/>
+	<property name="限定条件" value="绿子限定"/>
+	<property name="类别" value=""/>
+	<property name="限制卡" value=""/>
+	<property name="暂缺" value=""/>
+</card>
+<card id="a12af4e8-be4b-4cda-a6b6-534f97253005" name="杰诺·多重">
+	<property name="编号" value="PR_040"/>
+	<property name="稀有度" value="PR"/>
+	<property name="颜色" value="白"/>
+	<property name="类型" value="技艺"/>
+	<property name="等级" value=""/>
+	<property name="力量" value=""/>
+	<property name="界限" value=""/>
+	<property name="费用" value="白2蓝2"/>
+	<property name="成长费用" value=""/>
+	<property name="技能" value="使用时点【主要阶段】【攻击阶段】  从以下4项中选择至多2项。 「对战对手的1只LRIG在这个回合中不能攻击。」「将对战对手的所有SIGNI冻结。」 「将对战对手的1只SIGNI返回手牌。」 「抽2张卡。」"/>
+	<property name="生命迸发能力" value=""/>
+	<property name="生命迸发标记" value=""/>
+	<property name="防御标记" value=""/>
+	<property name="角色" value=""/>
+	<property name="限定条件" value=""/>
+	<property name="类别" value=""/>
+	<property name="限制卡" value=""/>
+	<property name="暂缺" value=""/>
+</card>
+
+  </cards>
+</set>

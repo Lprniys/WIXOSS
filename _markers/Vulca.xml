@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?> 
+<set name="Markers" id="01ecf94f-c408-4e43-8984-211fbdc25000"                          
+     gameId="a12af4e8-be4b-4cda-a6b6-534f9717391f" gameVersion="1.0.1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CardSet.xsd">
+  <markers>
+    <marker name="gold" id="01ecf94f-c408-4e43-8984-211fbdc25001"/>
+    <marker name="power" id="01ecf94f-c408-4e43-8984-211fbdc25002"/>
+  </markers>
+</set>

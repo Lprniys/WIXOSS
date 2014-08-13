@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Target="/markers/gold.png" Id="M01ecf94fc4084e438984211fbdc25001" Type="http://schemas.octgn.org/picture" />
+  <Relationship Target="/markers/power.png" Id="M01ecf94fc4084e438984211fbdc25002" Type="http://schemas.octgn.org/picture" />
+ </Relationships>

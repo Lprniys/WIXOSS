@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<game name="Wixoss The Card Game" id="a12af4e8-be5b-4cda-a6b6-534f9717391f" 
+tags="WXOCTGN"
+description="WIXOSS is a trading card game for two players with their LRIGs. Beat down opponent's LRIG and you will be mugen uncle."
+authors="SynTuner"
+octgnVersion="3.1.138.319" 
+version="1.0.0.0"
+setsurl="https://www.myget.org/feed/Packages/wixoss-project"
+gameurl="https://github.com/SynTuner/Wixoss" 
+iconurl="https://github.com/SynTuner/Wixoss" 
+markersize="16" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
+
+    <scripts>
+    <script src="scripts/actions.py" />
+    <script src="scripts/Methods.py" />
+    <script src="scripts/Cost.py" />
+    <script src="scripts/CardEffect.py" />
+    <script src="scripts/LifeBurst.py" />
+  </scripts>
+<events>
+    <event name="OnGameStart" action="helloworld"/>
+    <event name="OnMoveCard" action="moveTrigger"/>
+    <event name="OnLoadDeck" action="onLoadDeck"/>
+    <event name="OnTurn" action="onTurn"/>
+    <event name="OnCardClick" action="onCardClick"/>
+</events>
+<sounds>
+    <sound name="bgm" src="sounds/ichibanboshi.mp3"/>
+</sounds>
+   <fonts>
+       <font src="Fonts/CyberpunkIsNotDead.ttf" size="11" target="context"/> 
+       <font src="Fonts/cmd64.ttf" size="12" target="chat"/> 
+   </fonts>   
+   <proxygen definitionsrc="Proxy/proxydef.xml">
+   </proxygen>  
+   <documents>
+     <document name="Wixoss快速入门指南" icon="Documents/WIXOSS_LOGO.png" src="Documents/WIXOSSABC20140425.pdf" />
+   </documents>  
+  <card back="Cards/back.jpg" front="Cards/front.jpg" width="63" height="88">
+	<property name="编号" type="String" />
+	<property name="稀有度" type="String" />
+	<property name="颜色" type="String" />
+	<property name="类型" type="String" />
+	<property name="等级" type="String" />
+	<property name="力量" type="String" />
+	<property name="界限" type="String" />
+	<property name="费用" type="String" />
+	<property name="成长费用" type="String" />
+	<property name="技能" type="String" />
+	<property name="生命迸发能力" type="String" />
+	<property name="生命迸发标记" type="String" />
+	<property name="防御标记" type="String" />
+	<property name="角色" type="String" />
+	<property name="限定条件" type="String" />
+	<property name="类别" type="String" />
+	<property name="限制卡" type="String" />
+	<property name="暂缺" type="String" />
+  </card>
+
+<table name="桌面" visibility="undefined" ordered="False" width="1280" height="600" board="background/board.png" boardPosition="-640,-300,1280,600" background="background/background.png" backgroundStyle="uniformToFill">
+    <groupaction menu="决定先攻玩家" execute="decide" />
+    <groupaction menu="发动技艺" execute="mainArt" />
+    <groupaction menu="从废弃区发动..." execute="fromCrashActivate" />
+	<groupaction menu="进入攻击阶段" execute="artsPhase" />
+    <groupaction menu="回合结束" execute="endPhase" />
+    <groupaction menu="卡查信息（日文）" execute="openFAQ" />
+    <groupactions menu="Debug选项...">
+      <groupaction menu="进入成长阶段" execute="growPhase" />
+      <groupaction menu="进入主要阶段" shortcut="F1" execute="mainPhase" />
+      <groupaction menu="SIGNI攻击步骤" execute="attackPhase" />
+      <groupaction menu="test2" execute="prepare" />
+      <groupaction menu="响应解锁" execute="test3" />
+      <groupaction menu="更新信息" execute="updates" />
+      <groupaction menu="重整手卡" execute="test" />
+    </groupactions>
+    <cardaction menu="攻击" execute="test4" />
+    <cardaction menu="发动" execute="menuActivate" />
+    <cardaction menu="送入废弃区" execute="mainPhaseSend" />
+    <cardaction menu="查看详细信息" execute="viewProperties" />
+    <cardactions menu="单卡Debug选项...">
+      <cardaction menu="横置/竖置卡片" shortcut="F9" execute="kneel" />
+      <cardaction menu="力量变化" execute="addMarkers" />
+      <cardaction menu="冻结/恢复" execute="freeze" />
+      <cardaction menu="双重击溃/恢复" execute="doubleCrash" />
+      <cardaction menu="枪兵/恢复" execute="lancer" />
+      <cardaction menu="生命爆发" execute="debugLifeBurst" />
+      <cardaction menu="查看坐标" execute="position" />
+      <cardaction menu="支付" execute="paySpecialCost" />
+      <cardaction menu="翻转卡片" shortcut="F8" execute="flipcard" />
+    </cardactions>
+  </table>
+
+  <player summary="能量 {#Energy} / 生命 {#Life} / 手牌 {#手卡区}">
+  	    <counter name="Energy" default="0" reset="True" icon="Counters/energy.png" />
+    <counter name="Life" default="0" reset="True" icon="Counters/life.png" />
+    <counter name="白" default="0" reset="True" icon="Counters/white.png" />
+    <counter name="黑" default="0" reset="True" icon="Counters/black.png" />
+    <counter name="红" default="0" reset="True" icon="Counters/red.png" />
+    <counter name="蓝" default="0" reset="True" icon="Counters/blue.png" />
+    <counter name="绿" default="0" reset="True" icon="Counters/green.png" />
+    <counter name="无" default="0" reset="True" icon="Counters/colorless.png" />
+    <hand name="手卡区" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png">            
+        <groupaction menu="随机弃一张卡" execute="randomDiscard" />
+        <groupaction menu="弃除所有卡片" execute="discardList" />
+		<cardaction menu="使用卡片" default="False" execute="cast" />
+		<cardaction menu="查看详细信息" execute="viewProperties" />
+    </hand>
+
+    <group name="主卡组" visibility="none" width="63" height="88" icon="groups/house.png">
+	<groupaction menu="抽卡" shortcut="ctrl+D" default="False" execute="draw" />
+	<groupaction menu="洗混卡组" shortcut="ctrl+S" execute="shuffle" />
+   </group>
+
+    <group name="Lrig卡组" visibility="me" width="63" height="88" icon="groups/plot.png">
+    </group>
+
+    <group name="废弃区" visibility="all" width="63" height="88" icon="groups/dead.png"> 
+	<groupaction menu="重构主卡组" execute="rebuildDeck" />
+    </group>
+    <group name="Lrig废弃区" visibility="all" width="63" height="88" icon="groups/discard.png">      
+    </group>
+  </player>
+
+  <deck>
+		<section name="0级LRIG卡" group="手卡区" />
+		<section name="LRIG卡组" group="Lrig卡组" />
+		<section name="1级SINGI卡" group="主卡组" />
+		<section name="2级SINGI卡" group="主卡组" />
+		<section name="3级SINGI卡" group="主卡组" />
+		<section name="4级SINGI卡" group="主卡组" />
+		<section name="魔法卡" group="主卡组" />
+  </deck>
+  
+</game>
