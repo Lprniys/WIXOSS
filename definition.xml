@@ -6,8 +6,8 @@ authors="SynTuner"
 octgnVersion="3.1.138.319" 
 version="1.0.0.0"
 setsurl="https://www.myget.org/feed/Packages/wixoss-project"
-gameurl="https://github.com/SynTuner/Wixoss" 
-iconurl="https://github.com/SynTuner/Wixoss" 
+gameurl="https://github.com/SynTuner/WIXOSS" 
+iconurl="https://github.com/SynTuner/WIXOSS" 
 markersize="16" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
 
     <scripts>
