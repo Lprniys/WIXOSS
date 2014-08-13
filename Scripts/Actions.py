@@ -4,7 +4,7 @@
 #it for learning certain skills and game rules. Please do not use it for commercial purpose 
 #without permission.
 #
-#Copyright (C) 2014  Minchao Wu
+#Scripts Copyright (C) 2014  Minchao Wu
 #
 #Created by SynTuner 2014.07.05 
 #

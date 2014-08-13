@@ -4,7 +4,7 @@ Created on 2014年7月18日
 
 @author: SynTuner
 '''
-class CardCost:
+class CardCost:  #have some problems handling Chinese with regular expressions on OCTGN. All these classes is necessary until we can handle it in a uniform way.
     def __init__(self):
         self.etype = -2
     
