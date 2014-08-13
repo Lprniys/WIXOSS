@@ -43,6 +43,10 @@ An english version of this file may be available if required.
 
 - Game Documents 选项中可以查看Wixoss游戏的入门指南。
 
+### 卡包 ###
+
+- 涵盖了截至2014.08.13官方正式发售的卡包内的所有卡牌。
+
 
 ### Screenshots ###
 
