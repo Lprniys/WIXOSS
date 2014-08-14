@@ -18,7 +18,7 @@
 #
 #Testing: SynTuner  无限汉堡包
 #
-#A version of script with no automation stuff and which is based on OCTGN2 was created by 
+#A version of script with no automation and which is based on OCTGN2 was created by 
 #海落樱·坦格里安 2014.05.19 , revised by SynTuner 2014.05.23, and 咲·saki was responsible for 
 #cards data processing.
 #
@@ -961,7 +961,7 @@ def onLoadDeck(player, groups):
         checkDeck()
     
 #---------------------------------------------------------------------------
-# Debug stuff
+# Debugging
 #---------------------------------------------------------------------------
 
 def position(card,x = 0, y = 0):
