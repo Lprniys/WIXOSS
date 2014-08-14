@@ -869,6 +869,7 @@ class LifeBurst():
         
     def WX02_039(self, card): #幻兽 八犬
         mute()
+        genDraw(1)
         
     def WX02_040(self, card): #着植
         mute()
